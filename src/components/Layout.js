@@ -1,11 +1,16 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import CssBaseline from "@mui/material/CssBaseline";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Slide from "@mui/material/Slide";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Slide from '@mui/material/Slide';
+
+import { ThemeProvider } from '@mui/material';
+import theme from "../utils/muiTheme";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -34,10 +39,10 @@ HideOnScroll.propTypes = {
 
 export default function HideAppBar(props) {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar color="inherit">
+        <AppBar>
           <Toolbar>
             <Typography variant="h6" component="div">
               Scroll to hide App bar
@@ -45,7 +50,14 @@ export default function HideAppBar(props) {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <div className="app__layout">{props.children}</div>
-    </React.Fragment>
+      <Toolbar />
+
+      <Container component="main" className="app__layout">
+        <Box sx={{ my: 2 }}>
+
+          {props.children}
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 }

@@ -1,9 +1,15 @@
 .App{
+  /* colors */
+  /* lightblue = primary, indigo = secondary */
+  --light-blue: #b3e5fc;
+  --indigo: #5c6bc0; 
+  --white: #fff;
+
   min-height: 100dvh;
+  background-color: var(--light-blue);
   display: grid;
 }
 
 .app__layout{
-  padding-top: 100px;
-  background-color: aquamarine;
+
 }
