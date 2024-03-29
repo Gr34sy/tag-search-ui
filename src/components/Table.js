@@ -2,6 +2,9 @@ import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import theme from "../utils/muiTheme";
 import { ThemeProvider } from "@emotion/react";
+import { urlBase, urlTags } from "../utils/apiVariables";
+import data from "../utils/tags.json";
+
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -36,6 +39,23 @@ const rows = [
 ];
 
 export default function DataTable() {
+  const [tableData, setTableData] = React.useState(([]));
+
+  React.useEffect(() => {
+    // fetch(urlBase + urlTags)
+    // .then((res) => res.json())
+    // .then((data) => {
+    //   setTableData(data);
+    //   console.log(data);
+    // })
+    // .catch(e => {
+    //   console.error(e.message);
+    // });
+
+    console.log(data.items);
+   
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <div style={{ height: 500, width: "100%"}}>
