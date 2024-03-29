@@ -2,14 +2,19 @@
   /* colors */
   /* lightblue = primary, indigo = secondary */
   --light-blue: #b3e5fc;
-  --indigo: #5c6bc0; 
+  --indigo: #5c6bc09d; 
   --white: #fff;
 
   min-height: 100dvh;
-  background-color: var(--light-blue);
   display: grid;
+  background-color: var(--light-blue);
 }
 
 /* .app__layout{
 
 } */
+
+
+.app__layout .MuiDataGrid-footerContainer *{
+  color: var(--white);
+}
