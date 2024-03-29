@@ -9,9 +9,6 @@ function App() {
   return (
     <div className="App">
       <Layout>
-       test test
-       test test
-       
         <Table/>
       </Layout>
     </div>
