@@ -2,8 +2,9 @@
   /* colors */
   /* lightblue = primary, indigo = secondary */
   --light-blue: #b3e5fc;
-  --indigo: #5c6bc09d; 
+  --indigo: #5c6bc0; 
   --white: #fff;
+  --white-opacity: #ffffffb0;
 
   min-height: 100dvh;
   display: grid;
@@ -14,6 +15,34 @@
 
 } */
 
+.table__grid-wrapper{
+  height: 480px;
+  width: "100%";
+  margin-top: 1.2rem;
+}
+
+/* Label and button styling */
+.table__row-settings{
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.table__row-settings :is(label, input){
+  border-radius: 2px;
+  font-size: 1rem;
+}
+.table__row-settings label {
+  border: 1px solid var(--indigo);
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  color: var(--white);
+  background-color: var(--indigo);
+  border: 2px solid var(--indigo);
+}
+.table__row-settings input{
+  outline: none;
+  border: 2px solid var(--indigo);
+}
 
 .app__layout .MuiDataGrid-footerContainer *{
   color: var(--white);

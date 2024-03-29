@@ -60,6 +60,13 @@ const rows = data.items.map((item, index) => ({
 
 export default function DataTable() {
   const [tableData, setTableData] = React.useState([]);
+  const [rowsAmount, setRowsAmount] = React.useState(5);
+  
+  function handleRowAmountChange(e){
+    if(e.target.value >= 5){
+      setRowsAmount(e.target.value);
+    }
+  }
 
   React.useEffect(() => {
     // fetch(urlBase + urlTags)
@@ -77,7 +84,12 @@ export default function DataTable() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ height: 480, width: "100%" }}>
+      <div className="table__row-settings">
+        <label for="row-amount">Amount of rows per page:</label>
+        <input id="row-amount" type="number" value={rowsAmount} onChange={handleRowAmountChange}/>
+      </div>
+
+      <div className="table__grid-wrapper">
         <DataGrid
           sx={{
             ".MuiDataGrid-columnHeader": {
