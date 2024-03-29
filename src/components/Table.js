@@ -5,39 +5,61 @@ import { ThemeProvider } from "@emotion/react";
 import { urlBase, urlTags } from "../utils/apiVariables";
 import data from "../utils/tags.json";
 
-
 const columns = [
-  { field: "id", headerName: "ID", width: 100 },
-  { field: "name", headerName: "Tag Name", width: 160 },
-  { field: "count", headerName: "Pole Count", width: 160 },
+  {
+    field: "id",
+    headerName: "ID",
+    width: 100,
+    headerAlign: "center",
+    align: "center",
+  },
+  {
+    field: "name",
+    headerName: "Tag Name",
+    width: 160,
+    headerAlign: "center",
+    align: "center",
+  },
+  {
+    field: "count",
+    headerName: "Pole Count",
+    width: 160,
+    headerAlign: "center",
+    align: "center",
+  },
   {
     field: "has_synonyms",
     headerName: "Has Synonyms",
     type: "boolean",
     width: 160,
+    headerAlign: "center",
+    align: "center",
   },
   {
     field: "is_required",
     headerName: "Required",
     type: "boolean",
     width: 130,
+    headerAlign: "center",
+    align: "center",
   },
   {
     field: "is_moderator_only",
     headerName: "Moderator Only",
     type: "boolean",
-    width: 130,
+    width: 175,
+    headerAlign: "center",
+    align: "center",
   },
 ];
 
 const rows = data.items.map((item, index) => ({
-    id: index,
-    ...item,
-  })
-);
+  id: index,
+  ...item,
+}));
 
 export default function DataTable() {
-  const [tableData, setTableData] = React.useState(([]));
+  const [tableData, setTableData] = React.useState([]);
 
   React.useEffect(() => {
     // fetch(urlBase + urlTags)
@@ -51,12 +73,11 @@ export default function DataTable() {
     // });
 
     console.log(data.items);
-   
-  }, [])
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ height: 500, width: "100%"}}>
+      <div style={{ height: 480, width: "100%" }}>
         <DataGrid
           sx={{
             ".MuiDataGrid-columnHeader": {
@@ -68,11 +89,11 @@ export default function DataTable() {
               backgroundColor: "#fff",
             },
 
-            ".MuiDataGrid-footerContainer":{
+            ".MuiDataGrid-footerContainer": {
               backgroundColor: theme.palette.primary.main,
               color: "#fff !important",
               borderRadius: "2px",
-            }
+            },
           }}
           rows={rows}
           columns={columns}
@@ -81,7 +102,7 @@ export default function DataTable() {
               paginationModel: { page: 0, pageSize: 5 },
             },
           }}
-          pageSizeOptions={[5, 10]}
+          pageSizeOptions={[5, 10, 25, 30]}
           // checkboxSelection
         />
       </div>
