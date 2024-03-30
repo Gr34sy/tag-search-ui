@@ -1,3 +1,4 @@
+import "../styles/components/loading-spinner.css";
 
 export function LoadingSpinner(){
     return (

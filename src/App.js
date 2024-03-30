@@ -1,4 +1,5 @@
 // components
+import { ErrorAlert } from "./components/ErrorAlert";
 import Layout from "./components/Layout";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import Table from "./components/Table";
@@ -10,6 +11,8 @@ function App() {
   return (
     <div className="App">
       <Layout>
+        {/* <ErrorAlert /> */}
+        {/* <LoadingSpinner /> */}
         {/* <Table/> */}
       </Layout>
     </div>

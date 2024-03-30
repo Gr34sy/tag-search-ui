@@ -1,9 +1,16 @@
 import * as React from "react";
+
+// mui components
 import { DataGrid } from "@mui/x-data-grid";
 import theme from "../utils/muiTheme";
 import { ThemeProvider } from "@emotion/react";
+
+// api utilities
 import { urlBase, urlTags } from "../utils/apiVariables";
 import tags from "../utils/tags.json";
+
+// styles
+import "../styles/components/table.css";
 
 const columns = [
   {
