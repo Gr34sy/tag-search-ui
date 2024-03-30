@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import theme from "../utils/muiTheme";
 import { ThemeProvider } from "@emotion/react";
 import { urlBase, urlTags } from "../utils/apiVariables";
-import data from "../utils/tags.json";
+import tags from "../utils/tags.json";
 
 const columns = [
   {
@@ -53,19 +53,39 @@ const columns = [
   },
 ];
 
-const rows = data.items.map((item, index) => ({
+const rows = tags.items.map((item, index) => ({
   id: index,
   ...item,
 }));
 
 export default function DataTable() {
   const [tableData, setTableData] = React.useState([]);
+  const [paginationModel, setPaginationModel] = React.useState({
+    pageSize: 5,
+    page: 0,
+  });
   const [rowsAmount, setRowsAmount] = React.useState(5);
-  
-  function handleRowAmountChange(e){
-    if(e.target.value >= 5){
-      setRowsAmount(e.target.value);
-    }
+
+  function handleRowAmountChange() {
+    const inputValue = Number(document.querySelector("#row-amount").value);
+    console.log(inputValue);
+    
+    if (inputValue >= 5 && inputValue <= 100) {
+      setPaginationModel((prev) => ({
+        ...prev,
+        pageSize: inputValue,
+      }));
+    } else if(inputValue > 100){
+      setPaginationModel((prev) => ({
+        ...prev,
+        pageSize: 100,
+      }))
+    } else{
+      setPaginationModel((prev) => ({
+        ...prev,
+        pageSize: 5,
+      }))
+    } 
   }
 
   React.useEffect(() => {
@@ -79,14 +99,18 @@ export default function DataTable() {
     //   console.error(e.message);
     // });
 
-    console.log(data.items);
+    console.log(tags.items);
   }, []);
+
+  const rows = tags.items.map((item, i) => ({ ...item, id: i }));
 
   return (
     <ThemeProvider theme={theme}>
       <div className="table__row-settings">
-        <label for="row-amount">Amount of rows per page:</label>
-        <input id="row-amount" type="number" value={rowsAmount} onChange={handleRowAmountChange}/>
+        <button onClick={handleRowAmountChange}>
+          Set Number of Rows
+        </button>
+        <input id="row-amount" type="number" placeholder="5" min="5" max="100" />
       </div>
 
       <div className="table__grid-wrapper">
@@ -109,12 +133,9 @@ export default function DataTable() {
           }}
           rows={rows}
           columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
-          pageSizeOptions={[5, 10, 25, 30]}
+          paginationModel={paginationModel}
+          onPaginationModelChange={setPaginationModel}
+          pageSizeOptions={[5, 10, 25, 30, 50, 100]}
           // checkboxSelection
         />
       </div>

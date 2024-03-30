@@ -27,17 +27,23 @@
   gap: 1rem;
   justify-content: flex-start;
 }
-.table__row-settings :is(label, input){
+.table__row-settings :is(button, input){
   border-radius: 2px;
   font-size: 1rem;
 }
-.table__row-settings label {
+.table__row-settings button {
   border: 1px solid var(--indigo);
   padding: 0.5rem 1rem;
   text-transform: capitalize;
   color: var(--white);
   background-color: var(--indigo);
   border: 2px solid var(--indigo);
+  transition: .6s;
+}
+.table__row-settings button:hover{
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--indigo);
 }
 .table__row-settings input{
   outline: none;
