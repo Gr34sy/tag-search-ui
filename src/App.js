@@ -1,5 +1,6 @@
 // components
 import Layout from "./components/Layout";
+import { LoadingSpinner } from "./components/LoadingSpinner";
 import Table from "./components/Table";
 
 // styles

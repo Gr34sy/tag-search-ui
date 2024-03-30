@@ -64,7 +64,6 @@ export default function DataTable() {
     pageSize: 5,
     page: 0,
   });
-  const [rowsAmount, setRowsAmount] = React.useState(5);
 
   function handleRowAmountChange() {
     const inputValue = Number(document.querySelector("#row-amount").value);
