@@ -8,5 +8,9 @@
 
   font-size: 2rem;
   color: var(--white);
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
+
+.navbar__icon{
+    padding-right: 1rem;
 }
