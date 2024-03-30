@@ -1,0 +1,37 @@
+.success-alert{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 4;
+
+    border-top: 5px solid var(--green);
+    border-radius: 5px;
+    background-color: var(--white-opacity);
+    padding: 0.5rem;
+
+    width: 320px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.6rem;
+}
+
+.success-alert__icon{
+    width: 35px;
+    height: 35px;
+
+    svg{
+        fill: var(--green)
+    }
+}
+
+.success-alert__description{
+    font-size: 1.1rem;
+    color: #000;
+}
+
+@media(max-width: 675px){
+    .success-alert{
+        display: none;
+    }
+}
