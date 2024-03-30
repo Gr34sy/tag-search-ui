@@ -8,14 +8,14 @@
   --red: rgb(216, 44, 22);
   --green: rgb(18, 122, 53);
 
+  font-family: 'Roboto', sans-serif;
   min-height: 100dvh;
   display: grid;
+  grid-template-rows: auto 1fr;
   background-color: var(--light-blue);
-}
-
-.app__layout {
   position: relative;
 }
+
 
 :is(.custom-button, input) {
   border-radius: 2px;
