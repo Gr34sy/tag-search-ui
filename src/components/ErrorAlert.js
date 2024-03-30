@@ -12,11 +12,11 @@ export function ErrorAlert({ message }) {
 
       <p className="error-alert__description">
         <span>Error:</span>
-        {message}
+        {message || "Something went wrong"}
       </p>
 
       <button
-        className="error-alert__button"
+        className="custom-button"
         onClick={() => window.location.reload(false)}
       >
         Reload Page

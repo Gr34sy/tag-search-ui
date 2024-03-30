@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        {/* <ErrorAlert /> */}
+        <ErrorAlert message="Failed loading the data" />
         {/* <LoadingSpinner /> */}
         {/* <Table/> */}
       </Layout>
