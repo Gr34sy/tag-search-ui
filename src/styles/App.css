@@ -16,6 +16,11 @@
   position: relative;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 
 :is(.custom-button, input) {
   border-radius: 2px;

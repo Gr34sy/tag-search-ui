@@ -11,10 +11,10 @@ import "./styles/App.css";
 function App() {
   return (
     <Layout>
-      <ErrorAlert message="Failed loading the data" />
+      {/* <ErrorAlert message="Failed loading the data" />
+      <SuccessAlert message="Successfully retrieved the data" /> */}
+      <Table/>
       {/* <LoadingSpinner /> */}
-      <SuccessAlert message="Successfully retrieved the data" />
-      {/* <Table/> */}
     </Layout>
   );
 }

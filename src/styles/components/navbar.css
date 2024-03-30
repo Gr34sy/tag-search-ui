@@ -1,3 +1,12 @@
-.navbar{
-    background-color: var(--indigo);
+.navbar {
+  background-color: var(--indigo);
+
+
+  -webkit-box-shadow: -1px 3px 5px 0px rgba(48, 49, 59, 1);
+  -moz-box-shadow: -1px 3px 5px 0px rgba(48, 49, 59, 1);
+  box-shadow: -1px 3px 5px 0px rgba(48, 49, 59, 1);
+
+  font-size: 2rem;
+  color: var(--white);
+  padding: 1rem;
 }

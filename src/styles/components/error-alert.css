@@ -18,9 +18,7 @@
     width: 100px;
     height: 100px;
 
-    svg{
-        fill: var(--red);
-    }
+    color: var(--red);
 }
 
 .error-alert__description{

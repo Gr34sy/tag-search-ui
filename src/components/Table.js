@@ -113,7 +113,7 @@ export default function DataTable() {
   return (
     <ThemeProvider theme={theme}>
       <div className="table__row-settings">
-        <button onClick={handleRowAmountChange}>
+        <button className="custom-button" onClick={handleRowAmountChange}>
           Set Number of Rows
         </button>
         <input id="row-amount" type="number" placeholder="5" min="5" max="100" />
