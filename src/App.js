@@ -1,3 +1,6 @@
+// styles
+import "./styles/App.css";
+
 // components
 import Layout from "./components/Layout";
 import { LoadingSpinner } from "./components/LoadingSpinner";
@@ -5,17 +8,19 @@ import Table from "./components/Table";
 import { SuccessAlert } from "./components/SuccessAlert";
 import { ErrorAlert } from "./components/ErrorAlert";
 
-// styles
-import "./styles/App.css";
+// context
+import { DataStatusProvider } from "./utils/dataStatus-context";
 
 function App() {
   return (
-    <Layout>
-      {/* <ErrorAlert message="Failed loading the data" />
-      <SuccessAlert message="Successfully retrieved the data" /> */}
-      <Table/>
-      {/* <LoadingSpinner /> */}
-    </Layout>
+    <DataStatusProvider>
+      <Layout>
+        <ErrorAlert message="Failed loading the data" />
+        <SuccessAlert message="Successfully retrieved the data" />
+        {/* <Table /> */}
+        {/* <LoadingSpinner /> */}
+      </Layout>
+    </DataStatusProvider>
   );
 }
 

@@ -1,4 +1,9 @@
-.app__layout {
+.layout {
+   position: relative;
+   display: grid;
+}
+
+.layout__wrapper{
    align-self: center;
    width: min(100% - 2rem, 1400px);
    margin-inline: auto;
