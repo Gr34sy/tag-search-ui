@@ -5,10 +5,6 @@ import { DataGrid } from "@mui/x-data-grid";
 import theme from "../utils/muiTheme";
 import { ThemeProvider } from "@emotion/react";
 
-// api utilities
-import { urlBase, urlTags } from "../utils/apiVariables";
-import tags from "../utils/tags.json";
-
 // styles
 import "../styles/components/table.css";
 
@@ -60,13 +56,8 @@ const columns = [
   },
 ];
 
-const rows = tags.items.map((item, index) => ({
-  id: index,
-  ...item,
-}));
+export default function DataTable({data}) {
 
-export default function DataTable() {
-  const [tableData, setTableData] = React.useState([]);
   const [paginationModel, setPaginationModel] = React.useState({
     pageSize: 5,
     page: 0,
@@ -94,21 +85,7 @@ export default function DataTable() {
     } 
   }
 
-  React.useEffect(() => {
-    // fetch(urlBase + urlTags)
-    // .then((res) => res.json())
-    // .then((data) => {
-    //   setTableData(data);
-    //   console.log(data);
-    // })
-    // .catch(e => {
-    //   console.error(e.message);
-    // });
-
-    console.log(tags.items);
-  }, []);
-
-  const rows = tags.items.map((item, i) => ({ ...item, id: i }));
+  const rows = data.map((item, i) => ({ ...item, id: i }));
 
   return (
     <ThemeProvider theme={theme}>
