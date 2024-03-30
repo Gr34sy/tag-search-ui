@@ -3,10 +3,10 @@ import "./styles/App.css";
 
 // components
 import Layout from "./components/Layout";
-import { LoadingSpinner } from "./components/LoadingSpinner";
 import Table from "./components/Table";
 import { SuccessAlert } from "./components/SuccessAlert";
 import { ErrorAlert } from "./components/ErrorAlert";
+import { LoadingMessage } from "./components/LoadingMessage";
 
 //hooks and utils
 import { useState, useEffect } from "react";
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <Layout>
-      {dataStatus === "loading" && <LoadingSpinner />}
+      {dataStatus === "loading" && <LoadingMessage />}
       {dataStatus === "error" && (
         <ErrorAlert message="Failed loading the data" />
       )}

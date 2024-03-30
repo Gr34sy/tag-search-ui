@@ -5,6 +5,7 @@
 
 .layout__wrapper{
    align-self: center;
+   justify-self: center;
    width: min(100% - 2rem, 1400px);
    margin-inline: auto;
 }
