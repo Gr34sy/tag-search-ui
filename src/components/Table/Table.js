@@ -2,11 +2,11 @@ import * as React from "react";
 
 // mui components
 import { DataGrid } from "@mui/x-data-grid";
-import theme from "../utils/muiTheme";
+import theme from "../../utils/muiTheme";
 import { ThemeProvider } from "@emotion/react";
 
 // styles
-import "../styles/components/table.css";
+import "../../styles/components/table.css";
 
 const columns = [
   {

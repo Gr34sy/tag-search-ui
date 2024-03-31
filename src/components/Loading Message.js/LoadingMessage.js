@@ -1,6 +1,6 @@
-import '../styles/components/loading-message.css';
+import '../../styles/components/loading-message.css';
 
-import { LoadingSpinner } from './LoadingSpinner';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
 
 export function LoadingMessage(){
 

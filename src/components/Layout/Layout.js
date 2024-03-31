@@ -1,7 +1,7 @@
-import "../styles/components/layout.css";
+import "../../styles/components/layout.css";
 
-import { Footer } from "./Footer";
-import { Navbar } from "./Navbar";
+import { Footer } from "../Footer/Footer";
+import { Navbar } from "../Navbar/Navbar";
 
 export default function Layout(props) {
   return (

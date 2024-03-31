@@ -2,11 +2,11 @@
 import "./styles/App.css";
 
 // components
-import Layout from "./components/Layout";
-import Table from "./components/Table";
-import { SuccessAlert } from "./components/SuccessAlert";
-import { ErrorAlert } from "./components/ErrorAlert";
-import { LoadingMessage } from "./components/LoadingMessage";
+import Layout from "./components/Layout/Layout";
+import Table from "./components/Table/Table";
+import { SuccessAlert } from "./components/SuccessAlert/SuccessAlert";
+import { ErrorAlert } from "./components/ErrorAlert/ErrorAlert";
+import { LoadingMessage } from "./components/Loading Message.js/LoadingMessage";
 
 //hooks and utils
 import { useState, useEffect } from "react";

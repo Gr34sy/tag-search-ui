@@ -1,4 +1,4 @@
-import "../styles/components/success-alert.css";
+import "../../styles/components/success-alert.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";

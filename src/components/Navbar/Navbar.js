@@ -1,4 +1,4 @@
-import "../styles/components/navbar.css";
+import "../../styles/components/navbar.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTie } from "@fortawesome/free-solid-svg-icons";
