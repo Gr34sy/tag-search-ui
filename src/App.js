@@ -18,7 +18,7 @@ function App({dataSrc, infiniteLoading}) {
 
   useEffect(() => {
     if(!infiniteLoading){
-      fetch(dataSrc || (urlBase + urlTags))
+      fetch(dataSrc)
       .then((res) => res.json())
       .then((data) => {
         setTableData(data.items);
