@@ -1,6 +1,6 @@
 import  Table  from "./Table";
 
-import data from "../../utils/dummy_data";
+import { data } from "../../utils/dummy_data";
 
 export default{
     title: 'Table',
