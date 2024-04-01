@@ -12,6 +12,7 @@ import { LoadingMessage } from "./components/Loading Message.js/LoadingMessage";
 import { useState, useEffect } from "react";
 import { urlBase, urlTags } from "./utils/apiVariables";
 
+
 function App({dataSrc, infiniteLoading}) {
   const [dataStatus, setDataStatus] = useState("loading");
   const [tableData, setTableData] = useState([]);
@@ -40,7 +41,7 @@ function App({dataSrc, infiniteLoading}) {
 
   return (
     <Layout>
-      {dataStatus === "loading"  && <LoadingMessage />}
+      {dataStatus === "loading" && <LoadingMessage />}
       {dataStatus === "error" && (
         <ErrorAlert message="Failed loading the data" />
       )}
