@@ -1,4 +1,4 @@
-import "./ErrorAlert.css";
+import "../../styles/components/error-alert.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
