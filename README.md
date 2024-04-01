@@ -1,8 +1,7 @@
-# App created with React and Rest Countries API
-## The app enables users to search for specific country and then view its details
+# App created with React and Material UI Library
+## The app connects to the Stack Exchange API and displays all of the tags found on stackoverflow.com website. The user can also set the numbers of rows displayed on the page.
 
-
-### The app was created in order to learn React functionalities in a practical way. Especially communication with an API with fetch() JS function.
+### I've created this app in order to get to know Material UI component library for React. Especially I was curious about the DataGrid component which faciliates displaying large amounts of data. While creating the app I've also encountered the Storybook for the first time. I've learned the very basics of it and now I am looking forward to use it in bigger projects.
 
 #### Technologies used in the app:
 <img align="left" alt="React" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;" />
@@ -11,16 +10,15 @@
 
 <br/> <br/> <br/> 
 
-#### React Features used in the app:
-<p>-> React Router</p>
-<p>-> React Hooks </p>
-<p>-> React Components</p>
+#### Most Important Features used in the app:
+<p>-> React States</p>
+<p>-> Storybook </p>
+<p>-> Customized MaterialUI DataGrid Component </p>
 
 <br/> 
 
-#### App Functionalities:
-<p>1. Creating List:</p>
-<p>-> User can search countries by name.</p>
-<p>-> User can filter countries by continents.</p>
-<p>-> User can click on specific country in order to display details</p>
-<p>-> User can switch between nightmode and lightmode</p>
+#### How to run project:
+<p>-> download the repo</p>
+<p>-> run the "npm i" command in the app folder root</p>
+<p>-> npm start -> starts the project in dev mode on localhost</p>
+<p>-> npm run storybook -> runs storybook component view</p>
