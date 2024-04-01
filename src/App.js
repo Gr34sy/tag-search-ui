@@ -12,13 +12,13 @@ import { LoadingMessage } from "./components/Loading Message.js/LoadingMessage";
 import { useState, useEffect } from "react";
 import { urlBase, urlTags } from "./utils/apiVariables";
 
-function App({state}) {
-  const [dataStatus, setDataStatus] = useState( state || "fetching");
+function App({dataSrc, infiniteLoading}) {
+  const [dataStatus, setDataStatus] = useState("loading");
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    if(dataStatus === 'fetching'){
-      fetch(urlBase + urlTags)
+    if(!infiniteLoading){
+      fetch(dataSrc || (urlBase + urlTags))
       .then((res) => res.json())
       .then((data) => {
         setTableData(data.items);
@@ -40,7 +40,7 @@ function App({state}) {
 
   return (
     <Layout>
-      {(dataStatus === "loading" || dataStatus === "fetching") && <LoadingMessage />}
+      {dataStatus === "loading"  && <LoadingMessage />}
       {dataStatus === "error" && (
         <ErrorAlert message="Failed loading the data" />
       )}

@@ -1,4 +1,5 @@
 import App from "./App";
+import { urlBase, urlTags } from "./utils/apiVariables";
 
 export default {
     title: "App",
@@ -6,5 +7,5 @@ export default {
 }
 
 export const Default = () => <App/>;
-export const Loading = () => <App state="loading" />;
-export const Error = () => <App state="error" />;
+export const Loading = () => <App infiniteLoading/>;
+export const Error = () => <App dataSrc={urlBase + "/" + urlTags} />;
