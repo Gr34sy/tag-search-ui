@@ -13,13 +13,13 @@ import { useState, useEffect } from "react";
 import { urlBase, urlTags } from "./utils/apiVariables";
 
 
-function App({dataSrc, infiniteLoading}) {
+function App({dataSrc, infiniteLoading}){
   const [dataStatus, setDataStatus] = useState("loading");
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
     if(!infiniteLoading){
-      fetch(dataSrc)
+      fetch(dataSrc || urlBase + urlTags)
       .then((res) => res.json())
       .then((data) => {
         setTableData(data.items);
@@ -37,7 +37,7 @@ function App({dataSrc, infiniteLoading}) {
         console.error(e.message);
       });
     }
-  }, []);
+  }, [dataSrc, infiniteLoading]);
 
   return (
     <Layout>

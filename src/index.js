@@ -7,7 +7,7 @@ import { urlBase, urlTags } from "./utils/apiVariables";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App dataSrc={urlBase + urlTags} infiniteLoading={false}/>
+    <App dataSrc={urlBase + urlTags}/>
   </React.StrictMode>
 );
 
