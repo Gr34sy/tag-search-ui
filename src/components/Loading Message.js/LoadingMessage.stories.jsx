@@ -1,3 +1,4 @@
+
 import { LoadingMessage } from "./LoadingMessage";
 
 export default{
@@ -5,4 +6,4 @@ export default{
     component: LoadingMessage,
 };
 
-export const Default = () => <LoadingMessage />;
+export const Default = () =>  <LoadingMessage />;

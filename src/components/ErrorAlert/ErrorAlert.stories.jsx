@@ -7,4 +7,4 @@ export default {
     component: ErrorAlert,
 };
 
-export const Default = () => <ErrorAlert />;
+export const Default = () =>  <ErrorAlert />;

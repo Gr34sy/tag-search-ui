@@ -18,6 +18,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html{
+	background-color: var(--light-blue);
+}
+
 html,
 body,
 div,
